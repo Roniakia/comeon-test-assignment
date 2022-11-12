@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "mock-server": "json-server --watch data-mock/mock-data.json --port 3002 --middlewares data-mock/mock-api.js",
+
+    "dev:app": "next dev",
+    "dev": "npm-run-all --print-label --parallel mock-server dev:app",
+
+    "start:app": "next start",
+    "start": "npm-run-all --print-label --parallel mock-server start:app",
+
     "build": "next build",
-    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,5 +20,9 @@
     "next": "13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "npm-run-all": "^4.1.5"
   }
 }
