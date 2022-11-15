@@ -62,9 +62,7 @@ export const Provider = (props) => {
     if (typeof window !== 'undefined') {
       for (let key in session.player) {
         if (session.player.hasOwnProperty(key)) {
-          if (typeof window !== 'undefined') {
-            Storage.setValue('localStorage', key, session.player[key])
-          }
+          Storage.setValue('localStorage', key, session.player[key])
         }
       }
     }
