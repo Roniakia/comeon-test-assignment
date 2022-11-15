@@ -1,17 +1,33 @@
 ## Getting Started
 
-First, run the development server:
+Development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### What I already made
+- Auth
+- Game
+- Game cards
+- Search
+- It should look OKAY on different resolutions
+- Add a couple of new endpoints
+- Change a little some objects on mock server
+- Change UI a little
+- Change some use flow on the site
+- Use next.js for first time for fun.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### What can be improved in my opinion if I'll spend more time
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Change a little API endpoints (for examlple merge ```/login``` and ```/logout``` into ```/session```)
+- Use cookies for auth instead of localStorage
+- More polishing for some styles
+- Add fullscreen mode for games
+- Change a liitle file handling conventions
+- Git commit messages - I prefer to open one PR for one feature and have a good history 
+with readable messages, but it's a test assignment with different things to do 
+  so I just omitted this rule
+- It would be nice to add debounce for search input

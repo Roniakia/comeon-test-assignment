@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  color: $white;
+  margin: 0 auto 30px auto;
+  font-size: 8px;
+  opacity: .3;
+  text-align: center;
+
+  @include for-tablet-landscape-up {
+    max-width: 800px;
+  }
+}

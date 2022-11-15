@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+
+.form {
+  width: 100%;
+
+  @include for-tablet-landscape-up {
+    border: none;
+  }
+}

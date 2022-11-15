@@ -1,0 +1,21 @@
+@import "mixins";
+
+.container {
+  width: 100%;
+  aspect-ratio: 176 / 33;
+  background-image: url("../public/logo.svg");
+  background-size: contain;
+  background-position: center center;
+  margin: auto;
+  display: block;
+
+  @include for-tablet-portrait-up {
+    max-width: 600px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.logo {
+
+}

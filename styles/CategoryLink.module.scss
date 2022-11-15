@@ -1,0 +1,9 @@
+@import "variables";
+
+.link {
+  text-decoration: none;
+
+  &.active {
+    background-color: $brand-green;
+  }
+}

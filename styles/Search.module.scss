@@ -1,0 +1,9 @@
+@import "mixins";
+
+.container {
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    width: 25%;
+  }
+}
