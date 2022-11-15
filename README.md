@@ -31,3 +31,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 with readable messages, but it's a test assignment with different things to do 
   so I just omitted this rule
 - It would be nice to add debounce for search input
+- Store API host in ENV and create Provider for configuration
