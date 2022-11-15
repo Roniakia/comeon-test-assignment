@@ -1,5 +1,10 @@
 ## Getting Started
 
+```bash
+npm i
+```
+Then
+
 Development server:
 
 ```bash
