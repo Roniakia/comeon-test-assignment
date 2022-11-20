@@ -1,9 +1,14 @@
 @import "mixins";
+@import "variables";
 
 .container {
   width: 100%;
+  border-top: 1px solid $light-gray;
+  padding-top: 30px;
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
+    border: none;
+    padding-top: 0;
     width: 25%;
   }
 }

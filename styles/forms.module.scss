@@ -1,13 +1,26 @@
 @import "variables";
+@import "mixins";
 
 .form {
   display: flex;
 
   &.horizontal {
-    flex-direction: row;
+    flex-direction: column;
+
+    @include for-tablet-portrait-up {
+      flex-direction: row;
+
+    }
 
     & > *:not(:last-child) {
-      margin-right: 15px;
+
+      @include for-phone-only {
+        margin-bottom: 15px;
+      }
+
+      @include for-tablet-portrait-up {
+        margin-right: 15px;
+      }
     }
   }
 
@@ -16,6 +29,11 @@
     border-radius: 15px;
     border: 1px solid $dark-gray;
     height: 30px;
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+      width: auto;
+    }
   }
 
   button {
@@ -26,6 +44,12 @@
     color: $white;
     padding: 0 15px;
     transition: background-color .3s;
+    height: 30px;
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+      width: auto;
+    }
 
     &:hover {
       background-color: $brand-green;
