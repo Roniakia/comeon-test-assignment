@@ -11,7 +11,7 @@ const players = [
     "name": "Eric Beard",
     "avatar": "images/avatar/eric.jpg",
     "event": "I saw you won 500 SEK last time!",
-    "password": "dad",
+    "password": "daddad",
   },
   {
     "username": "stoffe",
