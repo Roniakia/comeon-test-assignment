@@ -1,6 +1,6 @@
 import Data from './mock-data.json'
 
-export default function handler(req, res) {
+export default function handler(req, res, next) {
   if (req.method === 'GET') {
     const { query } = req.query
     const game = Data.games.find(game => game.code === query)
@@ -16,4 +16,6 @@ export default function handler(req, res) {
       });
     }
   }
+
+  next()
 }
