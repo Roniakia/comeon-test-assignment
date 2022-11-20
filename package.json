@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "eslint": "8.28.0",
-    "eslint-config-next": "13.0.4"
+    "eslint-config-next": "13.0.4",
+    "path": "^0.12.7",
+    "sass": "^1.56.1"
   }
 }
