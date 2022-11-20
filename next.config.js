@@ -10,6 +10,11 @@ const nextConfig = {
         destination: '/games',
         permanent: true,
       },
+      {
+        source: '/search',
+        destination: '/games',
+        permanent: true,
+      },
     ]
   },
   sassOptions: {

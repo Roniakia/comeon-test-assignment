@@ -17,13 +17,13 @@ const Game = () => {
   const gameContainer = React.useRef(null);
   const [isReady, setIsReady] = React.useState(false)
 
-  const { data, error } = useSWR(slug ? `http://localhost:3002/game?query=${slug}` : null, fetcher)
+  const { data, error } = useSWR(slug ? `/api/game?query=${slug}` : null, fetcher)
 
   useEffect(() => {
     if (isReady && authenticated && data) {
       window.comeon.game.launch(slug)
     }
-  }, [data, isReady, authenticated])
+  }, [data, isReady, authenticated, slug])
 
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>

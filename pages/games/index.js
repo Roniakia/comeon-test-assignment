@@ -5,8 +5,8 @@ import GameCard from "../../components/game-card";
 import { fetcher } from "../../utils";
 
 const Games = () => {
-  const games = useSWR('http://localhost:3002/games', fetcher)
-  const categories = useSWR('http://localhost:3002/categories', fetcher)
+  const games = useSWR('/api/games', fetcher)
+  const categories = useSWR('/api/categories', fetcher)
 
   if (games.error || categories.error) return <div>failed to load</div>
   if (!games.data || !categories.data) return <div>loading...</div>

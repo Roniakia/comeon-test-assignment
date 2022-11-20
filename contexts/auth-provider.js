@@ -12,7 +12,7 @@ export const Provider = (props) => {
   })
   const [shouldLogin, setShouldLogin] = React.useState(null)
   const [shouldLogout, setShouldLogout] = React.useState(null)
-  const loginRequest = useSWR(shouldLogin ? `http://localhost:3002/login` : null, url => fetcher(url, {
+  const loginRequest = useSWR(shouldLogin ? `/api/login` : null, url => fetcher(url, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -21,7 +21,7 @@ export const Provider = (props) => {
     body: JSON.stringify(shouldLogin)
   }))
 
-  const logoutRequest = useSWR(shouldLogout ? `http://localhost:3002/logout` : null, url => fetcher(url, {
+  const logoutRequest = useSWR(shouldLogout ? `/api/logout` : null, url => fetcher(url, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

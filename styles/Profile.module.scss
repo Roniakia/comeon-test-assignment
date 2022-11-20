@@ -7,9 +7,11 @@
   margin-bottom: 15px;
 }
 
-.avatar {
-  border-radius: 50%;
-  margin-right: 5px;
+.avatarContainer {
+  &>img {
+    border-radius: 50%;
+    margin-right: 5px;
+  }
 }
 
 .name {

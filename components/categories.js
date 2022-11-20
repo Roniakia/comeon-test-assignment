@@ -4,7 +4,7 @@ import useSWR from "swr";
 import { fetcher } from "../utils";
 
 const Categories = () => {
-  const { data, error } = useSWR('http://localhost:3002/categories', fetcher)
+  const { data, error } = useSWR('/api/categories', fetcher)
 
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
